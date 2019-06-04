@@ -30,6 +30,7 @@
         <activity android:name=".MySet"/>
         <activity android:name=".NumberOfCaches"/>
         <activity android:name=".Aboutas"/>
+        <activity android:name=".collect"/>
         <activity android:name=".Movie"></activity>
       <activity android:name=".screen"></activity>
     </application>
