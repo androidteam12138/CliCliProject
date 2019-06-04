@@ -8,11 +8,22 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import tool.QueryCol;
+import tool.QueryColVed;
+
 public class Myhome extends AppCompatActivity {
     ImageButton Img_mycollect,Img_history,Img_offlinecenter,Img_Set,Img_help,Img_traffic,Img_movieticket,Img_bankcard;
     Button btn_vipVideo,btn_renewalVip,btn_history,btn_mycollect,btn_offlinecenter,btn_setting,btn_help,btn_traffic,btn_movieticket,btn_bankcard,btn_aboutAs,btn_quit;
     TextView txt_login;
     String parameter="";
+    public static int statement;
+    public static Map<Integer,List<String>> map;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,7 +78,30 @@ public class Myhome extends AppCompatActivity {
         btn_mycollect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Myhome.this, MainActivity.class);
+                map = new HashMap<>();
+                    QueryCol queryCol = new QueryCol(2);
+                    Thread thread = new Thread(queryCol);
+                    thread.start();
+                    try {
+                        thread.join();
+                        if(statement!=0) {
+                            for (int i = 0; i < QueryCol.s.length; i++) {
+                                List<String> list = new ArrayList<>();
+                                Thread thread1 = new Thread(new QueryColVed(Integer.parseInt(QueryCol.s[i])));
+                                thread1.start();
+                                thread1.join();
+                                for (int j = 0; j < QueryColVed.ss.length; j++) {
+                                    list.add(QueryColVed.ss[j]);
+                                }
+                                map.put(i, list);
+                            }
+                        }else{
+                            Toast.makeText(Myhome.this,"没有收藏记录",Toast.LENGTH_SHORT).show();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                }
+                Intent intent=new Intent(Myhome.this,collect.class);
                 startActivity(intent);
             }
         });
@@ -150,8 +184,32 @@ public class Myhome extends AppCompatActivity {
         Img_mycollect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Myhome.this,MySet.class);
+                map = new HashMap<>();
+                QueryCol queryCol = new QueryCol(2);
+                Thread thread = new Thread(queryCol);
+                thread.start();
+                try {
+                    thread.join();
+                    if(statement!=0) {
+                        for (int i = 0; i < QueryCol.s.length; i++) {
+                            List<String> list = new ArrayList<>();
+                            Thread thread1 = new Thread(new QueryColVed(Integer.parseInt(QueryCol.s[i])));
+                            thread1.start();
+                            thread1.join();
+                            for (int j = 0; j < QueryColVed.ss.length; j++) {
+                                list.add(QueryColVed.ss[j]);
+                            }
+                            map.put(i, list);
+                        }
+                    }else{
+                        Toast.makeText(Myhome.this,"没有收藏记录",Toast.LENGTH_SHORT).show();
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Intent intent=new Intent(Myhome.this,collect.class);
                 startActivity(intent);
+
             }
         });
         Img_offlinecenter.setOnClickListener(new View.OnClickListener() {

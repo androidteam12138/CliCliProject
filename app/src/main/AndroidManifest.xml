@@ -21,6 +21,8 @@
         <activity android:name=".MySet"/>
         <activity android:name=".NumberOfCaches"/>
         <activity android:name=".Aboutas"/>
+        <activity android:name=".collect"/>
+        <activity android:name=".Play"/>
     </application>
 
 </manifest>
