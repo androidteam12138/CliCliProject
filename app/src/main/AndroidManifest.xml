@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.m123">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ForgetActive"></activity>
+        <activity android:name=".RegistActive" />
+        <activity android:name=".LoginActive" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,12 +27,10 @@
         <activity android:name=".Play"/>
         <activity android:name=".ZongyiShouye"/>
         <activity android:name=".ZongyiShaixuan"/>
-        <activity android:name=".Myhome" />
         <activity android:name=".MySet"/>
         <activity android:name=".NumberOfCaches"/>
         <activity android:name=".Aboutas"/>
         <activity android:name=".Movie"></activity>
-        <activity android:name=".Play"></activity>
       <activity android:name=".screen"></activity>
     </application>
 
