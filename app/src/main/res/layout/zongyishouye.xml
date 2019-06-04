@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textViewx1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="30sp"
+            android:textColor="#00ffae"
+            android:text="●热门综艺"/>
+
+        <Button
+            android:id="@+id/chose1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right|center"
+            android:textSize="25dp"
+            android:background="@android:color/transparent"
+            android:text="筛选"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imagefczlmx"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x1" />
+
+            <TextView
+                android:id="@+id/textfczlmx"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="奇葩说"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imagegtxonex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/x2" />
+
+            <TextView
+                android:id="@+id/textgtxonex"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="极限挑战" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imagegtxtwox"
+                android:layout_width="232dp"
+                android:layout_height="100dp"
+                android:src="@drawable/x3" />
+
+            <TextView
+                android:id="@+id/textgtxtwox"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="快乐大本营" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imagexchhx"
+                android:layout_width="232dp"
+                android:layout_height="100dp"
+                android:src="@drawable/x4" />
+
+            <TextView
+                android:id="@+id/textxchhx"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="天天向上" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView2x"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#ffea00"
+        android:text="●音乐竞技"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="中国好声音"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x9"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="综艺6"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox7"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x7"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="综艺7"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x8"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="综艺9"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textViewx3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#001aff"
+        android:text="●搞笑综艺"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox9"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x9"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="综艺9"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/videox10"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/x10"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="综艺10"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

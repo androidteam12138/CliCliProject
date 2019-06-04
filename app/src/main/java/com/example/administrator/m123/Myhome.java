@@ -163,7 +163,7 @@ public class Myhome extends AppCompatActivity {
                 txt_login.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Myhome.this, MainActivity.class);
+                        Intent intent = new Intent(Myhome.this, LoginActive.class);
                         startActivity(intent);
                     }
                 });

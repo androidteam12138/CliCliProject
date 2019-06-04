@@ -23,6 +23,8 @@ import tool.SendGet;
 import static tool.StringDeal.StringDeal;
 
 public class MainActivity extends AppCompatActivity{
+    private Button cartoon;
+    Button variety;
     ImageButton myhome,download,homepage,vip;
     TextView txt;
     TextView text1, text2, text3, text4, text5, text6, text7, text8, text9, text10;
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity{
             }
         }
     };
+    Button Movie;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -220,11 +223,27 @@ public class MainActivity extends AppCompatActivity{
          * 4.用Handler发送延时信息，实现循环，最简单最方便
          */
         handler.sendEmptyMessageDelayed(0, 1000);
-
+        cartoon=(Button)findViewById(R.id.cartoon);
+        cartoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,CartoonActive.class);
+                startActivity(intent);
+            }
+        });
+        variety=(Button)findViewById(R.id.variety);
+        variety.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ZongyiShouye.class);
+                startActivity(intent);
+            }
+        });
         homepage=(ImageButton)findViewById(R.id.homepage2);
         vip=(ImageButton)findViewById(R.id.vip);
         download=(ImageButton)findViewById(R.id.download);
         myhome=(ImageButton)findViewById(R.id.myhome);
+        Movie=(Button)findViewById(R.id.movie);
 
         homepage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -251,6 +270,13 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,Myhome.class);
+                startActivity(intent);
+            }
+        });
+        Movie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Movie.class);
                 startActivity(intent);
             }
         });
@@ -324,7 +350,6 @@ public class MainActivity extends AppCompatActivity{
                         txt.append(ss[i]);
                     }
                 } catch (Exception e) {
-                    //txt.append("出错！");
                     e.printStackTrace();
                 }
             }

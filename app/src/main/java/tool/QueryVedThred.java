@@ -29,7 +29,6 @@ public class QueryVedThred implements Runnable {
                 for (int i = 0; i < ss.length; i++) {
                     list.add(Integer.parseInt(ss[i].toString().trim()));
                 }
-                System.out.println("*******************"+list.get(0));
             }else{
                 result = 0;
             }
